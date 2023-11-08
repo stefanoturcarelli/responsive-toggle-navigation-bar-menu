@@ -10,7 +10,10 @@ This project is a toggle menu with a grid layout. It allows users to open and cl
 - [HTML Structure](#html-structure)
 - [CSS Styling](#css-sytling)
 - [JavaScript Logic](#javascript-logic)
+- [Technologies used](#technologies-used)
+- [Demo](#demo)
 - [License](#license)
+- [References](#references)
 
 ## HTML Structure
 
@@ -54,6 +57,14 @@ Add the `transition` property to the grid to animate it.
 }
 ```
 
+Grid with menu closed:
+
+<img src = './assets/screenshot.png'>
+
+Grid with menu opened:
+
+<img src = './assets/screenshot-open.png'>
+
 ## JavaScript Logic
 
 The logic behind the functionality results by toggling between an open and close CSS classes.
@@ -67,12 +78,16 @@ const menuBtn = select('.menu-btn');
 
 The CSS classes we will toggle between are the following:
 
+This CSS class will expand the left grid column.
+
 ```css
 .grid-open {
   transition: 300ms ease-in-out;
   grid-template-columns: 80% auto;
 }
 ```
+
+This CSS class shows the hamburger menu icon and sets its size.
 
 ```css
 .menu-btn {
@@ -84,6 +99,8 @@ The CSS classes we will toggle between are the following:
   transition: all 0.1s ease-in-out;
 }
 ```
+
+    This CSS class shows the arrow icon after opening the menu.
 
 ```css
 .btn-container-open {
@@ -111,18 +128,6 @@ onEvent('click', menuBtn, () => {
 });
 ```
 
-## Project Structure
-
-The project consists of the following main files:
-
-- `index.html`: The HTML file that sets up the basic structure of the web page.
-- `style.css`: The CSS file containing styles for the web page.
-- `script.js`: The JavaScript file responsible for handling the menu toggle functionality.
-
-## Usage
-
-To use this project, simply open the `index.html` file in your web browser. Click the menu button to toggle the left column and open/close the menu.
-
 ## Technologies Used
 
 This project uses the following technologies and languages:
@@ -138,3 +143,8 @@ You can [see a demo here](https://stefanoturcarelli.github.io/grid-toggle-menu/)
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## References
+
+- [CSS tricks - Animating CSS Grid (How To + Examples)
+  ](https://css-tricks.com/animating-css-grid-how-to-examples/)
