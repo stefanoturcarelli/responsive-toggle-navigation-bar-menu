@@ -60,35 +60,16 @@ function create(element, parent = document) {
   return parent.createElement(element);
 }
 
-const grid = select('#grid');
-const left = select('#left');
-const right = select('#right');
+const grid = select('.grid');
+const left = select('.left');
+const right = select('.right');
+const menuBtn = select('.menu-btn');
 
 function openMenu() {
-	grid.classList.toggle()
+  grid.classList.toggle('grid-open');
+  menuBtn.classList.toggle('btn-container-open');
 }
 
-onEvent('click', grid, () => {
-	
-
-	#grid {
-		transition: 300ms;
-		display: grid;
-		grid-template-columns: 48px auto;
-	}
-	
-	#grid:has(#left:hover) {
-		grid-template-columns: 30% auto;
-	}
-	/* magic + CSS variable */
-	#grid {
-		transition: 300ms;
-		display: grid;
-		grid-template-columns: var(--left, 48px) auto;
-	}
-	
-	#grid:has(#left:hover) {
-		--left: 30%;
-	}
-	
-})
+onEvent('click', menuBtn, () => {
+  openMenu();
+});
