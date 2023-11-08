@@ -36,3 +36,5 @@ body {
 #grid:has(#left:hover) {
   --left: 30%;
 }
+
+.left 

@@ -59,3 +59,36 @@ function filterArray(array, callback) {
 function create(element, parent = document) {
   return parent.createElement(element);
 }
+
+const grid = select('#grid');
+const left = select('#left');
+const right = select('#right');
+
+function openMenu() {
+	grid.classList.toggle()
+}
+
+onEvent('click', grid, () => {
+	
+
+	#grid {
+		transition: 300ms;
+		display: grid;
+		grid-template-columns: 48px auto;
+	}
+	
+	#grid:has(#left:hover) {
+		grid-template-columns: 30% auto;
+	}
+	/* magic + CSS variable */
+	#grid {
+		transition: 300ms;
+		display: grid;
+		grid-template-columns: var(--left, 48px) auto;
+	}
+	
+	#grid:has(#left:hover) {
+		--left: 30%;
+	}
+	
+})
