@@ -146,5 +146,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## References
 
-- [CSS tricks - Animating CSS Grid (How To + Examples)
-  ](https://css-tricks.com/animating-css-grid-how-to-examples/)
+- <a href = 'https://css-tricks.com/animating-css-grid-how-to-examples/' target = '_blank'>CSS tricks - Animating CSS Grid (How To + Examples)</a>
