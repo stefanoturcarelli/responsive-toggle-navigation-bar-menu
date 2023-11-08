@@ -61,8 +61,6 @@ function create(element, parent = document) {
 }
 
 const grid = select('.grid');
-const left = select('.left');
-const right = select('.right');
 const menuBtn = select('.menu-btn');
 
 function openMenu() {

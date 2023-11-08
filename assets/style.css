@@ -4,43 +4,36 @@ body {
 
 .grid {
   height: 100dvh;
-  /* magic + CSS variable */
   display: grid;
-  grid-template-columns: var(--left, 48px) auto;
+  grid-template-columns: 48px auto;
   transition: 300ms;
 }
 
 .left {
-  background: #FFE2E2;
+  background: #ffe2e2;
 }
 
 .right {
-  background: #FFC7C7;
+  background: #ffc7c7;
 }
 
 .grid-open {
   transition: 300ms ease-in-out;
-  grid-template-columns: var(--left) auto;
-  --left: 80%;
+  grid-template-columns: 80% auto;
 }
 
-.btn-container-closed {
+.menu-btn {
   height: 3rem;
-  background-color: #FFE2E2;
-  background: center no-repeat url('./menu.png');
-  filter: invert(0);
-  background-size: 2rem;
+  background-color: #ffe2e2;
   cursor: pointer;
+  background: center no-repeat url('./menu.png');
+  background-size: 2rem;
   transition: all 0.1s ease-in-out;
 }
 
 .btn-container-open {
-  background-color: #FFE2E2;
-  height: 3rem;
   background: right no-repeat url('./close.png');
-  filter: invert(0);
   background-size: 2rem;
   background-position: right 0.5rem top 0.5rem;
   transition: all 0.1s ease-in-out;
-  cursor: pointer;
 }
